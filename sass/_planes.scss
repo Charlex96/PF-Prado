@@ -1,0 +1,141 @@
+$font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+@mixin textStyle ($font-family, $letter-spacing, $font-size) {
+    font-family: $font-family;
+    letter-spacing: $letter-spacing;
+    font-size: $font-size;
+
+}
+
+.ventajas{
+    border-top: 1px solid rgba(120, 120, 120, 0.214);
+    margin: 20px 0;
+    h5{
+        text-align: center;
+        margin: 20px 0 30px;
+        font-size: 17px;
+    }
+    p{
+        font-size: 14px;
+        text-align: start;
+    }
+}
+
+.texto{
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+
+.terminos{
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(121, 121, 121, 0.488);
+    .button{
+        display: inline-block;
+        margin-top: 30px;
+        font-weight: bolder;
+        padding: 10px 20px;
+        border: 1px solid black;
+        @include textStyle($font-family, 1px, 12px);
+
+    }
+    .button:hover{
+        background-color: $lineas_color;
+    }
+}
+
+.formulario{
+    margin: auto;
+    text-align: center;
+    background-color: $fondo_color;
+    padding: 50px 20px;
+    p{
+        font-weight: bolder;
+        margin-bottom: 30px;
+        span{
+            font-variant: small-caps;
+        }
+    }
+
+    form{
+        .elemento{
+            margin: auto;
+            text-align: center;
+            width: 95%;
+            border: 1px solid $lineas_color;
+            display: flex;
+            align-items: center;
+            input{
+                width: 100%;
+                padding: 20px;
+                background: transparent;
+                border: none;
+            }
+
+            a{
+                padding:0 20px;
+                text-decoration: none;
+                font-size: 12px;
+                font-weight: bolder;
+                @include textStyle($font-family, 1px, 12px);
+            }
+        }
+    }
+}
+
+
+
+
+@media (min-width:$layout-mobile) {
+
+    .elemento{
+        width: 500px;
+    }
+
+}
+@media (min-width:$layout-tablet) {
+
+    .ventajas{
+        height: 340px;
+    }
+
+    .formulario{
+        form{
+            .elemento{
+                width: 600px;
+            }
+        }
+    }
+
+}
+
+@media(min-width: $layout-desktop){
+
+    .texto{
+        margin-top: 100px;
+        .portada-div1{
+            h1{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+    .ventajas{
+        height: 320px;
+    }
+
+}
+
+@media(min-width: 1200px){
+
+    .ventajas{
+        height: 260px;
+    }
+
+}

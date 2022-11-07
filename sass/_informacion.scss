@@ -1,0 +1,160 @@
+
+.main-info{
+    background-color: white;
+
+    .info{
+        .planes-contenedor1{
+            padding: 30px;
+        }
+    }
+
+
+    .obj{
+        background-color: $fondo_color;
+
+        &-contenedor1{
+            padding: 20px;
+
+            &-title{
+                margin: auto;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .img-circle1{
+                    width: 140px;
+                    margin-bottom: 10px;
+                }
+                .hidden-title{
+                    font-weight: bolder;
+                    padding-right: 50px;
+                }
+            }
+            &-content{
+                width: 100%;
+                text-align: center;
+                h4{
+                    font-weight: bolder;
+                    display: none;
+                }
+                p{
+                    text-align: justify;
+                    font-size: 14px;
+                }
+            }
+
+        }
+
+        &-contenedor-revers{
+            flex-direction: row-reverse;
+
+            h4{
+                padding-left: 50px;
+            }
+
+        }
+        .obj-separador{
+            border-top: 1px solid $lineas_color;
+            border-bottom: 1px solid $lineas_color;
+        }
+    }
+
+
+    .ventajas-desventajas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        .vent-div{
+            text-align: left;
+            padding-bottom: 40px;
+            h5{
+                margin: auto;
+                padding: 40px;
+                font-weight: bolder;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width:$layout-tablet) {
+
+    .main-info{
+
+        
+        .obj{
+            
+            &-contenedor1{
+                margin: auto;
+                max-width: 1200px;
+                display: flex;
+                padding: 50px ;
+    
+                &-title{
+                    justify-content: center;
+                    .img-circle1{
+                        width: 220px;
+                    }
+                    .hidden-title{
+                        display: none;
+                    }
+                }
+                &-content{
+                    h4{
+                        display: block;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+    
+            }
+
+            .obj-separador{
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+    
+    
+        .ventajas-desventajas{
+            flex-direction: row;
+            padding: 100px;
+        }
+    
+    }
+
+}
+
+@media(min-width: $layout-desktop){
+
+
+    .main-info{
+    
+        .obj{
+    
+            &-contenedor1{
+    
+                &-title{
+                    .img-circle1{
+                        width: 250px;
+                    }
+
+                }
+
+                &-content{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+    
+            }
+
+        }
+    
+    
+    }
+
+}

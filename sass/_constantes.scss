@@ -1,0 +1,39 @@
+//----------- layout --------------------
+$layout-mobile: 530px;
+$layout-tablet: 720px;
+// $layout-desktop: 950px;
+$layout-desktop: 991px;
+
+//----------- size --------------------
+$radius_card: 20px;
+
+//----------- color --------------------
+$primary_color: #FFD825;
+$second_color: #1c314a;
+$third_color: #343434;
+$fondo_color: #f0f0f0;
+$figuras_color: rgba(255, 255, 255, 0.475);
+$lineas_color:rgba(148, 148, 148, 0.297);
+
+
+//--------------- mixins ----------------
+
+@mixin paralelogramo ($background) {
+    width: 130px; 
+    height: 120px; 
+    background: $background;
+    border-radius: 20px;
+    transform: skew(20deg);
+    opacity: 0.1;
+    position: absolute;
+}
+
+@mixin figuras-left($left, $bottom){
+    left: $left;
+    bottom: $bottom;
+}
+
+@mixin figuras-right($right, $top){
+    right: $right;
+    top: $top;
+}

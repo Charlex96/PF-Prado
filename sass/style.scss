@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Fira+Sans+Condensed:wght@300&display=swap');
+
+@import "constantes";
+@import "footer";
+@import "index";
+@import "planes";
+@import "clases";
+@import "informacion";
+@import "gimnasios";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Aboreto', cursive;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+main{
+    background-color: $second_color;
+}
+

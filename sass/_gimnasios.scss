@@ -1,0 +1,196 @@
+.form{
+    .elemento{
+        background-color: white;
+        margin: auto;
+        text-align: center;
+        width: 90%;////
+        border: 1px solid $lineas_color;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        input{
+            width: 100%;
+            padding: 5px;
+            background: transparent;
+            border: none;
+        }
+
+        .icon-search{
+            color: black;
+            font-size: 20px;///
+            margin: 0 15px;
+        }
+    }
+}
+
+
+.main-gimnasios{
+
+    background-color: white;
+    margin: auto;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 30px;
+
+    .lugares{
+        display: grid;
+        grid-template-columns:  1fr;///
+        gap: 20px;
+        .zona{
+            background-color: $fondo_color;
+            width: 340px;
+
+            &-image{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/1.png");
+                background-repeat: no-repeat;
+                background-size: 340px;
+                background-position: center;
+                color: white;
+                height: 340px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+    
+                .zona-title{
+                    display: flex;
+                    padding: 10px;
+                    gap: 5px;
+                    .icon-zona{
+                        font-size: 20px;
+                    }
+                }
+    
+                h4{
+                    font-weight: bolder;
+                    padding: 0 10px;
+                    text-shadow: 1px 1px 1px black;
+    
+                }
+    
+                .zona-precios{
+                    display: flex;
+                    justify-content: space-around;
+                    background-color: rgba(0, 0, 0, 0.708);
+                    &-div{
+                        text-align: center;
+                        width: 100%;
+                        p{
+                            font-size: 14px;
+                        }
+    
+                        h5{
+                            font-weight: bolder;
+                            font-size: 30px;
+                        }
+                    }
+                    .divider-zona{
+                        border-left: 1px solid white;
+                    }
+                }
+    
+    
+            }
+
+            .img2{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/2.png");
+            }
+            .img3{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/3.png");
+            }
+            .img4{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/4.png");
+            }
+            .img5{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/5.png");
+            }
+            .img6{
+                background:linear-gradient( rgba(0, 0, 0, 0.31) 100%, rgba(0, 0, 0, 0.31)100%),url("../img/6.png");
+            }
+    
+    
+            &-description{
+                a{
+                    text-decoration: none;
+                }
+                .button{
+                    color: white;
+                    text-transform: uppercase;
+                    font-weight: bolder;
+                    text-align: center;
+                    background-color: rgb(216, 0, 0);
+                    padding: 8px 0;
+                    margin: 2px;
+                }
+    
+                div{
+                    padding: 20px ;
+                    line-height: 3px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media(min-width:$layout-mobile){
+
+    .form{
+        .elemento{
+            width: 500px;
+            input{
+                padding: 10px;
+            }
+    
+            .icon-search{
+                font-size: 24px;
+            }
+        }
+    }
+
+}
+
+@media (min-width:$layout-tablet) {
+
+    .form{
+        .elemento{
+            width: 500px;
+            input{
+                padding: 10px;
+            }
+    
+            .icon-search{
+                font-size: 24px;
+            }
+        }
+    }
+    
+    .main-gimnasios{
+    
+        .lugares{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+    }
+
+}
+
+@media(min-width: $layout-desktop){
+
+    .form{
+        .elemento{
+            width: 600px;
+        }
+    }
+    
+    .main-gimnasios{
+        .lugares{
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+    }
+
+}

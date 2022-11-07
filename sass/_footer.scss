@@ -1,0 +1,278 @@
+$padding_footer: 20px;
+
+@mixin display-center ( $diplay, $aling-items ){
+    display: $diplay;
+    align-items: $aling-items;
+}
+
+.footer{
+    margin: auto;
+    background-color: $second_color;
+    color: white;
+    position: relative;
+    padding-top: 50px;
+
+    .paralelogramo {
+        @include paralelogramo( $figuras_color);
+    }
+
+    .figura1{
+        @include figuras-left(-90px, 70px);
+    }
+    .figura2{
+        @include figuras-left(-90px, 130px);
+
+    }
+    .figura3{
+        @include figuras-right(-90px, 70px);
+
+    }
+    .figura4{
+        @include figuras-right(-90px, 130px);
+
+    }
+
+    &-contenedor1{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: $padding_footer;
+        margin: 0 30px;
+        .footer-div1{
+
+            &-logo{
+                @include display-center(flex, center);
+                gap: 2px;
+                height: 60px;
+                // background-color: green;
+                img{
+                    // width: 32px;
+                    height: 100%;
+                    padding: 10px 0;
+                    float: left;
+                    margin-right: 5px;
+                }
+                div{
+                    display: inline;
+                    text-align: center;
+                    h6{
+                        font-variant: small-caps;
+                        font-size: 17px;
+                    }
+                    p{
+                        font-size: 11px;
+                        margin: 0;
+                    }
+
+                }
+            }
+
+            &-icon{
+                margin: $padding_footer 0 ;
+                .icon{
+                    color: white;
+                    font-size: 16px;
+                    background-color: $figuras_color;
+                    padding: 5px;
+                    margin: 0 2px;
+                    border-radius: 100px;
+                    transition: 1.5s ease-out;
+                }
+                .icon:hover{
+                    transition: .3s;
+                }
+                .icon-facebook:hover{
+                    background-color: rgb(59, 89, 152);
+                }
+                .icon-instagram:hover{
+                    background-color: rgb(179, 48, 120);
+                }
+                .icon-twitter:hover{
+                    background-color: rgb(0, 172, 238);
+                }
+                .icon-tiktok:hover{
+                    background-color: black;
+                }
+            }
+
+        }
+
+        .footer-div2{
+            div{
+                margin: 25px 0;
+                font-size: 14px;
+                a{
+                    text-decoration: none;
+                    color: rgb(208, 208, 208);
+                }
+                a:hover{
+                    color: $primary_color;
+                    font-size: 14.5px;
+                }
+                
+            }
+        }
+    }
+
+    &-contenedor2{
+        height: 70px;
+        margin: 20px 40px;
+        padding: 20px;
+        text-align: center;
+        justify-content: space-between;
+        border-top: 1px solid rgba(255, 255, 255, 0.331);
+
+        div{
+            p{
+                font-size: 11px;
+                margin-bottom: 5px;
+                span{
+                    font-variant: small-caps;
+                }
+            }
+        }
+        
+    }
+}
+
+
+@media(min-width:$layout-mobile){
+
+    .footer{
+    
+        &-contenedor1{
+            margin: 0 90px;
+
+            .footer-div1{
+
+                &-logo{
+                    gap: 5px;
+                    div{
+                        h6{
+                        font-size: 19px;
+                        }
+                    }
+                }
+    
+                &-icon{
+                    .icon{
+                        font-size: 18px;
+                    }
+                }
+    
+            }
+
+        }
+    
+        &-contenedor2{
+            margin: 20px 90px;
+            div{
+                p{
+                    font-size: 12px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
+@media (min-width:$layout-tablet) {
+
+    .footer{
+    
+        .paralelogramo {
+            width: 160px; 
+        }
+    
+        .figura1{
+            @include figuras-left(-100px, 40px);
+            
+        }
+        .figura2{
+            @include figuras-left(-100px, 120px);
+        }
+        .figura3{
+            @include figuras-right(-100px, 40px);
+        }
+        .figura4{
+            @include figuras-right(-100px, 120px);
+        }
+    
+        &-contenedor1{
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            margin: 0 90px;
+            .footer-div1{
+                &-logo{
+                    p{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+        }
+    
+        &-contenedor2{
+            margin: 20px 90px;
+            padding: $padding_footer;
+            @include display-center(flex, center);
+    
+            div{
+                p{
+                    font-size: 12px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+@media(min-width: $layout-desktop){
+
+
+    .footer{
+    
+        .paralelogramo {
+            width: 180px; 
+        }
+    
+        .figura1{
+            @include figuras-left(-80px, 40px);
+
+        }
+        .figura2{
+            @include figuras-left(-80px, 120px);
+
+        }
+        .figura3{
+            @include figuras-right(-80px, 40px);
+
+        }
+        .figura4{
+            @include figuras-right(-80px, 120px);
+
+        }
+    
+        &-contenedor1{
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            margin: 0 130px;    
+        }
+    
+        &-contenedor2{
+            margin: 20px 130px;
+            padding: $padding_footer;
+            @include display-center(flex, center);
+    
+            div{
+                p{
+                    font-size: 13px;
+                }
+            }
+            
+        }
+
+    }
+
+}
+
